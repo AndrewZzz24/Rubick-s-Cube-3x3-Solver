@@ -42,7 +42,6 @@ cube_::cube_() {
 bool cube_::save_the_state() {
 
     std::cout << "Enter the file name\n";
-    //file_name = R"(C:\Users\Andrz\CLionProjects\IS-2020-prog-2-sem\homework6\input.txt)";
     std::cin >> file_name;
     std::ofstream file(file_name);
 
@@ -80,7 +79,6 @@ bool cube_::save_the_state() {
 bool cube_::read_the_state() {
 
     std::cout << "Enter the file name\n";
-    //file_name = R"(C:\Users\Andrz\CLionProjects\IS-2020-prog-2-sem\homework6\input.txt)";
     std::cin >> file_name;
     std::ifstream file(file_name);
 
@@ -88,7 +86,7 @@ bool cube_::read_the_state() {
         throw std::runtime_error("bad open");
 
 
-    cb.resize(6, std::vector<std::vector<char>>(3));
+    cb.resize(6, std::vector < std::vector < char >> (3));
 
     std::string tmp;
     int i;
@@ -184,7 +182,7 @@ bool check_rightness_ed(std::string &s) {
 
 bool cube_::check_edges() const {
 
-    std::set<std::string> edgs;
+    std::set <std::string> edgs;
     std::string ed;
     ed = ed + cb[0][0][1] + cb[1][1][0];
     if (!check_rightness_ed(ed) || edgs.count(ed) != 0)
@@ -294,7 +292,7 @@ bool check_rightness_angle(std::string &s) {
 
 bool cube_::check_angles() const {
 
-    std::set<std::string> angles;
+    std::set <std::string> angles;
     std::string s1;
 
     s1 = s1 + cb[0][0][0] + cb[5][0][2] + cb[1][0][0];

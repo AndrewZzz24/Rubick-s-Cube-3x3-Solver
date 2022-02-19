@@ -9,7 +9,8 @@ class cube_ {
 
 private:
 
-    std::vector<std::vector<std::vector<char>>> cb;
+    std::vector <std::vector<std::vector < char>>>
+    cb;
 
     std::string answer;
     std::string file_name;
